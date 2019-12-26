@@ -77,3 +77,20 @@ server {
 ```
 service nginx restart
 ```
+
+## Update /etc/php/7.2/fpm/php-fpm.conf
+```
+emergency_restart_threshold 10
+emergency_restart_interval 1m
+process_control_timeout 10s
+```
+
+## Update /etc/php/7.2/fpm/pool.d/www.conf
+```
+pm = dynamic
+pm.max_children = 5
+pm.start_servers = 3
+pm.min_spare_servers = 2
+pm.max_spare_servers = 4
+pm.max_requests = 200
+```
