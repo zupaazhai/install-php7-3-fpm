@@ -1,4 +1,4 @@
-# install-php7-3-fpm
+# install-php7-3-fpm-laravel
 
 ```
 apt update && sudo apt install nginx
