@@ -1,7 +1,9 @@
 # install-php7-3-fpm
 
+```
 apt update && sudo apt install nginx
 service nginx status
+```
 
 ## Allow Port
 ufw allow OpenSSH
