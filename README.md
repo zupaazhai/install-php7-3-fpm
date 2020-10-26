@@ -94,3 +94,22 @@ pm.min_spare_servers = 2
 pm.max_spare_servers = 4
 pm.max_requests = 200
 ```
+
+## nginx.conf (/etc/nginx/nginx.conf) in http scope
+```
+fastcgi_buffers 8 16k;
+fastcgi_buffer_size 32k;
+fastcgi_connect_timeout 300;
+fastcgi_send_timeout 300;
+fastcgi_read_timeout 300;
+```
+
+## Set php.ini (/etc/php/7.3/fpm/php.ini)
+```
+max_execution_time = 300
+```
+
+## Set request_terminate_timeout (/etc/php/fpm/pool.d/www.conf)
+```
+request_terminate_timeout = 300
+```
